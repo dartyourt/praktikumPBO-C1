@@ -75,4 +75,15 @@ public class Garis {
         System.out.println("Garis(" + titikAwal.getAbsis() + ", " + titikAwal.getOrdinat() + "),(" + titikAkhir.getAbsis() + ", " + titikAkhir.getOrdinat() + ")");
 
     }
+
+    // Persamaan Garis Linear
+    String persamaanGaris() {
+        double m = gradienGaris();
+        double c = titikAwal.getOrdinat() - m * titikAwal.getAbsis();
+        if (c < 0) {
+            return "y = " + m + "x - " + Math.abs(c);
+        } else {
+            return "y = " + m + "x + " + c;
+        }
+    }
 }
