@@ -1,5 +1,4 @@
-package Praktikum1;
-
+package Praktikum2;
 public class MGaris {
     public static void main(String[] args) {
         Garis G1 = new Garis();

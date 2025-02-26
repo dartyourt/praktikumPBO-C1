@@ -1,83 +1,82 @@
-package Praktikum1;
-
+package Praktikum2;
 public class Garis {
-    Titik titikAwal;
-    Titik titikAkhir;
-    static int counterGaris = 0;
+    private Titik titikAwal;
+    private Titik titikAkhir;
+    private static int counterGaris = 0;
     /* METHOD */
     // konstruktor untuk membuat Garis dengan titik awal dan titik akhir (0,0) dan (1,1)
-    Garis() {
+    public Garis() {
         titikAwal = new Titik();
         titikAkhir = new Titik(1,1);
         counterGaris++;
     }
-    Garis(Titik T1, Titik T2) {
+    public Garis(Titik T1, Titik T2) {
         titikAwal = T1;
         titikAkhir = T2;
         counterGaris++;
     }
 
     // mengembalikan jumlah Garis yang telah dibuat
-    static int getCounterGaris() {
+    public static int getCounterGaris() {
         return counterGaris;
     }
     
     // mengembalikan nilai titik awal
-    Titik getTitikAwal() {
+    public Titik getTitikAwal() {
         return titikAwal;
     }
 
     // mengembalikan nilai titik akhir
-    Titik getTitikAkhir() {
+    public Titik getTitikAkhir() {
         return titikAkhir;
     }
 
     // mengubah nilai titik awal
-    void setTitikAwal(Titik T) {
+    public void setTitikAwal(Titik T) {
         titikAwal = T;
     }
 
     // mengubah nilai titik akhir
-    void setTitikAkhir(Titik T) {
+    public void setTitikAkhir(Titik T) {
         titikAkhir = T;
     }
 
     // mengembalikan nilai panjang garis
-    double panjangGaris() {
+    public double panjangGaris() {
         return Math.sqrt((titikAkhir.getAbsis() - titikAwal.getAbsis())*(titikAkhir.getAbsis() - titikAwal.getAbsis()) + 
         (titikAkhir.getOrdinat() - titikAwal.getOrdinat())*(titikAkhir.getOrdinat() - titikAwal.getOrdinat()));
     }
     
     // mengembalikan nilai gradien garis
-    double gradienGaris() {
+    public double gradienGaris() {
         return (titikAkhir.getOrdinat() - titikAwal.getOrdinat()) / (titikAkhir.getAbsis() - titikAwal.getAbsis());
     }
     
     // mengembalikan nilai titik tengah garis
-    Titik titikTengah() {
+    public Titik titikTengah() {
         double x = (titikAwal.getAbsis() + titikAkhir.getAbsis()) / 2;
         double y = (titikAwal.getOrdinat() + titikAkhir.getOrdinat()) / 2;
         return new Titik(x, y);
     }
     
     // mengecek apakah garis sejajar dengan garis lain 
-    boolean isSejajar(Garis G) {
+    public boolean isSejajar(Garis G) {
         return this.gradienGaris() == G.gradienGaris();
     }
 
     // mengecek apakah garis tegak lurus dengan garis lain
-    boolean isTegakLurus(Garis G) {
+    public boolean isTegakLurus(Garis G) {
         return this.gradienGaris() * G.gradienGaris() == -1;
     }
 
     // mencetak garis
-    void printGaris() {
+    public void printGaris() {
         System.out.println("Garis(" + titikAwal.getAbsis() + ", " + titikAwal.getOrdinat() + "),(" + titikAkhir.getAbsis() + ", " + titikAkhir.getOrdinat() + ")");
 
     }
 
     // Persamaan Garis Linear
-    String persamaanGaris() {
+    public String persamaanGaris() {
         double m = gradienGaris();
         double c = titikAwal.getOrdinat() - m * titikAwal.getAbsis();
         if (c < 0) {

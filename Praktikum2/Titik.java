@@ -1,4 +1,4 @@
-package Praktikum1;
+package Praktikum2;
 
 public class Titik {
     private double absis;
