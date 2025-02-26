@@ -6,6 +6,7 @@ public class MTitik {
         Titik T2 = new Titik(3,5);
         Titik T3 = new Titik();
         T1.printTitik();
+        T1.absis = 3;
         T1.setAbsis(3);
         T1.setOrdinat(4);
         T1.printTitik();
