@@ -11,6 +11,9 @@ public class Mahasiswa {
     private Kendaraan kendaraan;
 
     public Mahasiswa() {
+        this.nama = "";
+        this.nim = "";
+        this.prodi = "";
         this.listMatkul = new ArrayList<>();
     }
 
@@ -19,6 +22,38 @@ public class Mahasiswa {
         this.nama = nama;
         this.prodi = prodi;
         this.listMatkul = new ArrayList<>();
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public String getProdi() {
+        return prodi;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public void setProdi(String prodi) {
+        this.prodi = prodi;
+    }
+
+    public void setDosenWali(Dosen dosenWali) {
+        this.dosenWali = dosenWali;
+    }
+
+    public void setKendaraan(Kendaraan kendaraan) {
+        this.kendaraan = kendaraan;
     }
 
     public void addMatkul(MataKuliah newMatkul) {
