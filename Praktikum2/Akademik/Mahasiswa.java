@@ -71,6 +71,19 @@ public class Mahasiswa {
             System.out.println(listMatkul.get(i).getNama());
         }
     }
+
+    public int getJumlahSks() {
+        int totalSks = 0;
+        for (int i = 0; i < listMatkul.size(); i++) {
+            totalSks += listMatkul.get(i).getSks();
+        }
+        return totalSks;
+    }
+
+
+    public int getJumlahMatkul() {
+        return listMatkul.size();
+    }
 }
 
 

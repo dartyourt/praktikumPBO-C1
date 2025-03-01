@@ -12,5 +12,7 @@ public class MMahasiswa {
         M1.setDosenWali(D1);
         M1.setKendaraan(K1);
         M1.printDetailMhs();
+        System.out.println("Jumlah SKS: " + M1.getJumlahSks());
+        System.out.println("Jumlah Mata Kuliah: " + M1.getJumlahMatkul());
     }
 }
