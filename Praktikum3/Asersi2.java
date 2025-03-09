@@ -1,3 +1,11 @@
+/* 
+ * File   : Asersi2.java
+ * Deskripsi : Program untuk demo asersi, yang akan menolak
+ *              input jari-jari lingkaran bernilai 0
+ * Pembuat : Haidar Ali Laudza /24060123140151
+ * Tanggal : 7 Maret 2025
+ */
+
 class Lingkaran {
     private double jari2;
     public Lingkaran(double jari2) {
@@ -14,10 +22,8 @@ public class Asersi2 {
         Lingkaran l = new Lingkaran(jari2);
         double keliling = l.hitungKeliling();
         System.out.println("Keliling lingkaran: " + keliling);
-        /*  harusnya gunakan if else assert(jari2<=0):"Jari-jari tidak boleh nol!!!";
-            kalau seperti di atas, maka akan muncul AssertionError
-            kalau seperti kode awal, maka tidak akan muncul AssertionError ketika jari2<=0
-            Sehingga Asersi di kode awal digunakan pada kondisi yang tidak diinginkan 
+        /*  harusnya gunakan if else assert(jari2<=0):"Jari-jari tidak boleh nol!!!"
+            karena tetap saja tidak ada penanganan jika jari-jarinya 0
         */
     }
 
