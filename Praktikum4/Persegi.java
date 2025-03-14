@@ -1,3 +1,9 @@
+/* 
+ * File   : Persegi.java
+ * Deskripsi : program untuk mendefinisikan child class BangunDatar, Persegi 
+ * Pembuat : Haidar Ali Laudza /24060123140151
+ * Tanggal : 14 Maret 2025
+ */
 package Praktikum4;
 public class Persegi extends BangunDatar{
     private double sisi;

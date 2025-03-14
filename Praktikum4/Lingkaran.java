@@ -1,3 +1,11 @@
+/* 
+ * File   : Lingkaran.java
+ * Deskripsi : program untuk mendefinisikan child class BangunDatar, Lingkaran 
+ * Pembuat : Haidar Ali Laudza /24060123140151
+ * Tanggal : 14 Maret 2025
+ */
+
+
 package Praktikum4;
 
 public class Lingkaran extends BangunDatar{

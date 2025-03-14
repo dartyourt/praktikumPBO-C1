@@ -1,3 +1,10 @@
+/* 
+ * File   : BangunDatar.java
+ * Deskripsi : program untuk mendefinisikan parent class BangunDatar 
+ * Pembuat : Haidar Ali Laudza /24060123140151
+ * Tanggal : 14 Maret 2025
+ */
+
 package Praktikum4;
 
 public class BangunDatar {
