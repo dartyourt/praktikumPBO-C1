@@ -1,4 +1,4 @@
-package Praktikum4.AKADEMIK;
+package Praktikum4.UNIVERSITAS;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
