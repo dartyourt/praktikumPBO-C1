@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         // Buat Fakultas
         Fakultas fakTeknik = new Fakultas("Teknik");
+        Fakultas FSM = new Fakultas("Sains dan Matematika")
 
         // Buat Program Studi
         ProgramStudi prodiInformatika = new ProgramStudi("Informatika", "IF");
