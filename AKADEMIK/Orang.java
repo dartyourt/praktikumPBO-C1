@@ -35,7 +35,11 @@ public class Orang {
         this.email = email;
     }
 
-    public String getInfo() {
-        return "Nama: " + nama + ", Alamat: " + alamat + ", Email: " + email;
-    }  
+    public void printInfo() {
+        System.out.printf("+-----------------+----------------------------+\n");
+        System.out.printf("| %-15s | %-26s |\n", "Nama", nama);
+        System.out.printf("| %-15s | %-26s |\n", "Alamat", alamat);
+        System.out.printf("| %-15s | %-26s |\n", "Email", email);
+        System.out.printf("+-----------------+----------------------------+\n");
+    } 
 }

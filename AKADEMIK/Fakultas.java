@@ -18,4 +18,11 @@ public class Fakultas {
     public String infoFakultas() {
         return "Fakultas: " + nama;
     }
+
+    public void printInfo() {
+        System.out.printf("\n===== INFORMASI FAKULTAS =====\n");
+        System.out.printf("+-------------------------------+\n");
+        System.out.printf("| Fakultas: %-23s |\n", nama);
+        System.out.printf("+-------------------------------+\n");
+    }
 }

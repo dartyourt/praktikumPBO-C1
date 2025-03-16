@@ -29,4 +29,13 @@ public class Dosen extends Orang {
     public void mengajar(MataKuliah mk) {
         System.out.println(nama + " mengajar mata kuliah " + mk.getNama());
     }
+
+    @Override
+    public void printInfo() {
+        System.out.printf("\n===== INFORMASI DOSEN =====\n");
+        super.printInfo();
+        System.out.printf("| %-15s | %-26s |\n", "NIP", getNip());
+        System.out.printf("| %-15s | %-26s |\n", "Prodi", getProdi());
+        System.out.printf("+-----------------+----------------------------+\n");
+    }
 }

@@ -22,4 +22,13 @@ public class MataKuliah {
     public int getSks() {
         return sks;
     }
+
+    public void printInfo() {
+        System.out.printf("\n===== INFORMASI MATA KULIAH =====\n");
+        System.out.printf("+------------+--------------------+------+\n");
+        System.out.printf("| %-10s | %-18s | %-4s |\n", "Kode", "Nama", "SKS");
+        System.out.printf("+------------+--------------------+------+\n");
+        System.out.printf("| %-10s | %-18s | %-4d |\n", getIdMatkul(), getNama(), getSks());
+        System.out.printf("+------------+--------------------+------+\n");
+    }
 }

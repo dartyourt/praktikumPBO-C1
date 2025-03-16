@@ -4,17 +4,27 @@ import java.util.ArrayList;
 
 public class Mahasiswa extends Orang {
     private String nim;
+    private int angkatan;
     private String prodi;
     private ArrayList<MataKuliah> listMatkul;
     private Dosen dosenWali;
     private Kendaraan kendaraan;
     private final int sksMaksimal = 24;
 
-    public Mahasiswa(String nim, String nama, String alamat, String email, String prodi) {
+    public Mahasiswa(String nama, String alamat, String email, String NIM, int angkatan, String prodi) {
         super(nama, alamat, email);
-        this.nim = nim;
+        this.nim = NIM;
+        this.angkatan = angkatan;
         this.prodi = prodi;
         this.listMatkul = new ArrayList<>();
+    }
+
+    public int getAngkatan() {
+        return angkatan;
+    }
+
+    public void setAngkatan(int angkatan) {
+        this.angkatan = angkatan;
     }
 
     public String getNim() {
@@ -33,11 +43,13 @@ public class Mahasiswa extends Orang {
         this.kendaraan = kendaraan;
     }
 
-    public void addMatkul(MataKuliah newMatkul) throws Exception {
-        if (getJumlahSks() + newMatkul.getSks() > sksMaksimal) {
-            throw new Exception("Mahasiswa " + nama + " tidak bisa mengambil " + newMatkul.getNama() + ", melebihi batas SKS!");
+    public void addMatkul(MataKuliah mk) {
+        if (getJumlahSks() + mk.getSks() > sksMaksimal) {
+            System.out.println("Gagal menambahkan " + mk.getNama() + ". Total SKS melebihi batas (" + sksMaksimal + " SKS).");
+            return;
         }
-        listMatkul.add(newMatkul);
+        listMatkul.add(mk);
+        System.out.println("Mata Kuliah " + mk.getNama() + " berhasil ditambahkan untuk " + nama);
     }
 
     public int getJumlahSks() {
@@ -48,16 +60,31 @@ public class Mahasiswa extends Orang {
         return totalSks;
     }
 
-    public void printDetailMhs() {
-        System.out.println("Nama: " + nama);
-        System.out.println("NIM: " + nim);
-        System.out.println("Prodi: " + prodi);
-        System.out.println("Dosen Wali: " + (dosenWali != null ? dosenWali.getNama() : "Belum ditentukan"));
-        System.out.println("Kendaraan: " + (kendaraan != null ? kendaraan.getJenis() + " " + kendaraan.getNoPlat() : "Tidak memiliki kendaraan"));
-        System.out.println("Mata Kuliah yang diambil: ");
-        for (MataKuliah mk : listMatkul) {
-            System.out.println("- " + mk.getNama() + " (" + mk.getSks() + " SKS)");
+    public void printInfo() {
+        System.out.printf("\n===== INFORMASI MAHASISWA =====\n");
+        System.out.printf("+-----------------+----------------------------+\n");
+        System.out.printf("| %-15s | %-26s |\n", "Nama", getNama());
+        System.out.printf("| %-15s | %-26s |\n", "NIM", getNim());
+        System.out.printf("| %-15s | %-26s |\n", "Prodi", getProdi());
+        System.out.printf("| %-15s | %-26s |\n", "Angkatan", getAngkatan());
+        System.out.printf("| %-15s | %-26s |\n", "Dosen Wali", (dosenWali != null ? dosenWali.getNama() : "Belum ditentukan"));
+        System.out.printf("| %-15s | %-26s |\n", "Kendaraan", (kendaraan != null ? kendaraan.getJenis() + " " + kendaraan.getNoPlat() : "Tidak memiliki kendaraan"));
+        System.out.printf("+-----------------+----------------------------+\n");
+
+        if (listMatkul.isEmpty()) {
+            System.out.println("| Mata Kuliah yang diambil: Tidak ada              |");
+        } else {
+            System.out.println("\n===== MATA KULIAH YANG DIAMBIL =====");
+            System.out.printf("+------------+--------------------+------+\n");
+            System.out.printf("| %-10s | %-18s | %-4s |\n", "Kode", "Nama", "SKS");
+            System.out.printf("+------------+--------------------+------+\n");
+            for (MataKuliah mk : listMatkul) {
+                System.out.printf("| %-10s | %-18s | %-4d |\n", mk.getIdMatkul(), mk.getNama(), mk.getSks());
+            }
+            System.out.printf("+------------+--------------------+------+\n");
         }
-        System.out.println("Total SKS: " + getJumlahSks() + "/" + sksMaksimal);
+
+        System.out.printf("\n| Total SKS: %-32s |\n", getJumlahSks() + "/" + sksMaksimal);
+        System.out.printf("+---------------------------------------+\n");
     }
 }

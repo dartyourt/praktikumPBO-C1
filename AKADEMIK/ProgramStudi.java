@@ -20,4 +20,12 @@ public class ProgramStudi {
     public String infoProdi() {
         return "Program Studi: " + nama + " (" + kode + ")";
     }
+
+    public void printInfo() {
+        System.out.printf("\n===== INFORMASI PROGRAM STUDI =====\n");
+        System.out.printf("+-----------------+-----------------+\n");
+        System.out.printf("| %-15s | %-15s |\n", "Nama", nama);
+        System.out.printf("| %-15s | %-15s |\n", "Kode", kode);
+        System.out.printf("+-----------------+-----------------+\n");
+    }
 }
