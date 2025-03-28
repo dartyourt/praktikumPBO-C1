@@ -17,6 +17,7 @@ public class Tendik extends Karyawan {
 
     @Override
     public void printInfo() {
+        System.out.println("\n--- Informasi Tendik " + (getCounterTendik()) + " ---");
         super.printInfo();
         System.err.println("Jumlah tendik : " + getCounterTendik());
     }

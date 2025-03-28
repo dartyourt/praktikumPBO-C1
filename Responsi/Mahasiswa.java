@@ -46,6 +46,7 @@ public class Mahasiswa extends CivitasAkademika {
 
     @Override
     public void printInfo() {
+        System.out.println("\n--- Informasi Mahasiswa " + (getCounterMahasiswa()) + " ---");
         super.printInfo();
         System.out.println("NIM: " + getNIM());
         System.out.println("Fakultas: " + fakultas.getNama());
