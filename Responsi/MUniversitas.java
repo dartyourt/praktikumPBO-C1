@@ -12,7 +12,7 @@ public class MUniversitas{
         Fakultas feb = new Fakultas("Eknomi dan Bisnis", 4000000, 4000000);
 
         //Mahasiswa
-        Mahasiswa mhs1 = new Mahasiswa("Ayaka", "ayaka1@gmail.com", "2406060606125", feb, 2);
+        Mahasiswa mhs1 = new Mahasiswa("Ayaka Kamisato", "kamisatoaya1@gmail.com", "2406060606125", feb, 2);
 
         //Dosen
         Dosen dosen1 = new Dosen("Ardhianto Purnomo", "ardhiP@yahoo.co.id", "7652371478", 5, ti);
