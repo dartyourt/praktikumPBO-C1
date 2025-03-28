@@ -13,6 +13,7 @@ public class MUniversitas{
 
         //Mahasiswa
         Mahasiswa mhs1 = new Mahasiswa("Ayaka Kamisato", "kamisatoaya1@gmail.com", "2406060606125", feb, 2);
+        Mahasiswa mhs2 = new Mahasiswa("Sung Jin Woo","jinwooOP@gmail.com" , "2406160606126", ti, 3);
 
         //Dosen
         Dosen dosen1 = new Dosen("Ardhianto Purnomo", "ardhiP@yahoo.co.id", "7652371478", 5, ti);
@@ -20,16 +21,15 @@ public class MUniversitas{
 
         // Tendik
         Tendik tendik1 = new Tendik("Galing Nugra", "Galgaling@gmail.com", "7293618912", 3);
+        Tendik tendik2 = new Tendik("Purwanto", "wantowant@gmail.com", "7293618912", 2);
 
         // Tampilkan Informasi
-        System.out.println("--- Informasi Mahasiswa ---");
         mhs1.printInfo();
-        System.out.println("\n--- Informasi Dosen 1 ---");
+        mhs2.printInfo();
         dosen1.printInfo(); 
-        System.out.println("\n--- Informasi Dosen 2 ---");
         dosen2.printInfo();
-        System.out.println("\n--- Informasi Tendik ---");
         tendik1.printInfo();
+        tendik2.printInfo();
 
     } 
 }     
