@@ -8,13 +8,11 @@
 public abstract class Karyawan extends CivitasAkademika{
     private String nip;
     private double masaKerja;
-    private static int counterKaryawan = 0;
 
     public Karyawan(String nama, String email, String nip, double masaKerja) {
         super(nama, email);
         this.nip = nip;
         this.masaKerja = masaKerja;
-        counterKaryawan++;
     }
 
     public String getNip() {
@@ -33,9 +31,7 @@ public abstract class Karyawan extends CivitasAkademika{
         this.masaKerja = masaKerja;
     }
 
-    public static int getCounterKaryawan() {
-        return counterKaryawan;
-    }
+
 
     public abstract double hitungGaji();
 

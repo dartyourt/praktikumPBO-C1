@@ -35,6 +35,7 @@ public class Dosen extends Karyawan {
     public void printInfo() {
         super.printInfo();
         System.out.println("Fakultas: " + getFakultas().getNama());
+        System.out.println("Jumlah Dosen: " + getCounterDosen());
     }
 
 }

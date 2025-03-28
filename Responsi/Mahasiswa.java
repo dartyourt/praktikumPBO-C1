@@ -51,5 +51,6 @@ public class Mahasiswa extends CivitasAkademika {
         System.out.println("Fakultas: " + fakultas.getNama());
         System.out.println("Semester: " + getSemester());
         System.out.println("Biaya Kuliah: " + hitungBiayaKuliah());
+        System.out.println("Jumlah mhs: " + getCounterMahasiswa());
     }
 }
