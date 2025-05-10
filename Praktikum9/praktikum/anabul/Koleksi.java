@@ -1,11 +1,10 @@
-package Praktikum9.praktikum.koleksi;
-
-public class koleksi <T> {
+package Praktikum9.praktikum.anabul;
+public class Koleksi<T> {
     private T[] wadah;
     private int nbElm;
 
     @SuppressWarnings("unchecked")
-    public koleksi(int size) {
+    public Koleksi(int size) {
         wadah = (T[]) new Object[size];
         nbElm = 0;
     }
