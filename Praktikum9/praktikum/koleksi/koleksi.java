@@ -1,4 +1,4 @@
-package praktikum9.praktikum.koleksi;
+package Praktikum9.praktikum.koleksi;
 
 public class koleksi <T> {
     private T[] wadah;
