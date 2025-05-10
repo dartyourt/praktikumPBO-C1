@@ -5,11 +5,7 @@ public class BangunDatarGenericTest {
         System.err.println("================lingkaran==================");
         Lingkaran lingkaran = new Lingkaran(2);
         BangunDatarGeneric<Lingkaran> bdg = new BangunDatarGeneric<Lingkaran>();
-<<<<<<< HEAD
-        bdg.set(2);
-=======
         bdg.set(lingkaran);
->>>>>>> ca66e5121280052de37f4814ee018aa1157ec9ae
         System.out.println("Keliling Lingkaran: " + bdg.hitungKeliling());
         System.out.println("tipe generic: " + bdg.get().getClass().getName());
         //uji persegi
