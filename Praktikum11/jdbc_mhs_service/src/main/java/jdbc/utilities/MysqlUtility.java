@@ -19,17 +19,10 @@ public class MysqlUtility {
     public static Connection getConnection() {
         if (koneksi == null) {
             try {
-                // Load JDBC driver
                 Class.forName("com.mysql.jdbc.Driver");
-
-                // Sesuaikan host, port, dan nama database
                 String url = "jdbc:mysql://localhost:3306/jdbc_mhs_service";
-
-                // Sesuaikan username dan password
                 String user = "root";
                 String password = "";
-
-                // Buat koneksi
                 koneksi = DriverManager.getConnection(url, user, password);
 
                 if (koneksi != null) {

@@ -29,7 +29,7 @@ public class MysqlMahasiswaService {
         return new Mahasiswa(id, nama);
     }
 
-    /* Menambahkan data mahasiswa ke database */
+    /* Menambahkan data mahasiswa */
     public void add(Mahasiswa mhs) {
         String sql = "INSERT INTO mahasiswa (id, nama) VALUES (?, ?)";
         try (PreparedStatement ps = koneksi.prepareStatement(sql)) {
